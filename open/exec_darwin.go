@@ -19,5 +19,5 @@ func openWait(input string) *exec.Cmd {
 }
 
 func openWithWait(input string, appName string) *exec.Cmd {
-	return exec.Command("open", "-W", "-n", "-a", appName, input)
+	return exec.Command(appName, input)
 }
