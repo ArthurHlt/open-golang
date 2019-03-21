@@ -25,7 +25,7 @@ func openWait(input string) *exec.Cmd {
 	cmd.Stdout = buf
 	err := cmd.Run()
 	if err != nil {
-		return err
+		panic(err)
 	}
 	path := strings.TrimSpace(buf.String())
 	return exec.Command(path, input)
