@@ -31,3 +31,11 @@ func openWith(input string, appName string) *exec.Cmd {
 	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	return cmd
 }
+
+func openWait(input string) *exec.Cmd {
+	panic("unsupported os")
+}
+
+func openWithWait(input string, appName string) *exec.Cmd {
+	panic("unsupported os")
+}

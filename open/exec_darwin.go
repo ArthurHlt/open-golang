@@ -13,3 +13,11 @@ func open(input string) *exec.Cmd {
 func openWith(input string, appName string) *exec.Cmd {
 	return exec.Command("open", "-a", appName, input)
 }
+
+func openWait(input string) *exec.Cmd {
+	return exec.Command("open", "-W", input)
+}
+
+func openWithWait(input string, appName string) *exec.Cmd {
+	return exec.Command("open", "-W", "-a", appName, input)
+}

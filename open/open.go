@@ -26,6 +26,15 @@ func Run(input string) error {
 
 /*
 	Open a file, directory, or URI using the OS's default
+	application for that object type. Wait for the opened
+	process to complete.
+*/
+func RunWait(input string) error {
+	return openWait(input).Run()
+}
+
+/*
+	Open a file, directory, or URI using the OS's default
 	application for that object type. Don't wait for the
 	open command to complete.
 */
@@ -39,6 +48,15 @@ func Start(input string) error {
 */
 func RunWith(input string, appName string) error {
 	return openWith(input, appName).Run()
+}
+
+/*
+	Open a file, directory, or URI using the specified application
+	application for that object type. Wait for the opened
+	process to complete.
+*/
+func RunWithWait(input string, appName string) error {
+	return openWithWait(input, appName).Run()
 }
 
 /*
